@@ -1,0 +1,19 @@
+Description 1:
+There are 3 main functions for Authentication:
+- signup: create new User in MongoDB database (role is user if not specifying role)
+- signin:
+
+find username of the request in database, if it exists
+compare password with password in database using bcrypt, if it is correct
+generate a token using jsonwebtoken
+return user information & access Token
+- signout: clear current session.
+
+
+Description 2:
+Controller for testing Authorization
+There are 4 functions:
+– /api/test/all for public access
+– /api/test/user for loggedin users (any role)
+– /api/test/mod for moderator users
+– /api/test/admin for admin users

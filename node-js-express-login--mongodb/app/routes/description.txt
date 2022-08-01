@@ -1,0 +1,19 @@
+Description - 1
+When a client sends request for an endpoint using HTTP request (GET, POST, PUT, DELETE), we need to determine how the server will response by setting up the routes.
+
+We can separate our routes into 2 part: for Authentication and for Authorization (accessing protected resources).
+
+Authentication:
+
+POST /api/auth/signup
+POST /api/auth/signin
+POST /api/auth/signout
+
+
+Description - 2
+Authorization:
+
+GET /api/test/all
+GET /api/test/user for loggedin users (user/moderator/admin)
+GET /api/test/mod for moderator
+GET /api/test/admin for admin
